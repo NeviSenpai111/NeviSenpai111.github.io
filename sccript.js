@@ -1,16 +1,20 @@
+function toggleBurgerMenu(element) {
+    element.classList.toggle('active');
+    toggleSidebar();
+}
+
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
-    document.addEventListener("DOMContentLoaded", function() {
-        const switchInput = document.getElementById('switch');
-        switchInput.checked = false;
-        toggleSidebar();
-    });
-    const switchInput = document.getElementById('switch');
+    sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
 
+    // Random picture logic
+    const randomNumber = Math.floor(Math.random() * 100000) + 1;
+    const randomPicture = document.getElementById('random-picture');
 
-    if (switchInput.checked) {
-        sidebar.style.width = window.innerWidth <= 768 ? '100%' : '250px';
+    if (randomNumber === 6969) { // Adjust the probability as needed
+        randomPicture.src = 'bilder/KöppelStonedpng.png'; // Set the path to your picture
+        randomPicture.style.display = 'block';
     } else {
-        sidebar.style.width = '0';
+        randomPicture.style.display = 'none';
     }
 }

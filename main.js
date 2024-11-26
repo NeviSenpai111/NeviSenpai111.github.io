@@ -14,19 +14,28 @@ controls.enableDamping = true; // Enable damping (inertia)
 controls.dampingFactor = 0.25; // Damping factor
 controls.screenSpacePanning = false; // Disable panning
 
+// Add ambient light
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Soft white light
+scene.add(ambientLight);
+
+// Add directional light
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Bright white light
+directionalLight.position.set(5, 10, 7.5); // Position the light
+scene.add(directionalLight);
+
 const loader = new GLTFLoader();
 loader.load(
-    'Models/little_witch_academia.glb', // Replace with the path to your model
+    'Models/gojo_satoru.glb', // Ensure this path is correct
     function (gltf) {
         scene.add(gltf.scene);
     },
     undefined,
     function (error) {
-        console.error(error);
+        console.error('An error happened', error);
     }
 );
 
-camera.position.z = 5;
+camera.position.set(0, 1, 5); // Adjust as needed
 
 function animate() {
     requestAnimationFrame(animate);

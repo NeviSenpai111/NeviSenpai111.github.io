@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="bilder/Skibidisigma.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Eportfolio</title>
+    <title>Gwar Gura</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <script src="https://kit.fontawesome.com/c160e01bab.js" crossorigin="anonymous"></script>
@@ -11,12 +12,13 @@
 </head>
 <body>
 <header>
-    <label for="switch" class="switch">
-        <input id="switch" type="checkbox" onclick="toggleSidebar()" />
-        <span class="slider"></span>
-        <span class="decoration"></span>
-    </label>
-
+    <div class="box">
+        <div class="btn not-active" onclick="toggleBurgerMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <div id="nav-container">
         <div class="toggle-icon" onclick="toggleSidebar()">
             <span class="bar"></span>
@@ -24,46 +26,77 @@
             <span class="bar"></span>
         </div>
     </div>
-    <h1>Willkomen zu meinem Eportfolio</h1>
+    <h1>Hobbies</h1>
+
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>   Home</a></li>
+                <li><a href="uebermich.html"><i class="fa-solid fa-user"></i>   Über mich</a></li>
+                <li><a href="hobbies.html"><i class="fa-solid fa-brain"></i>   Hobbies</a></li>
+                <li><a href="projekte.html"><i class="fa-solid fa-code"></i>   Projekte</a> </li>
+                <li><a href="impressum.html"><i class="fa-solid fa-envelope"></i>   Impressum</a></li>
+            </ul>
+        </nav>
+    </aside>
 </header>
-<aside id="sidebar">
-    <nav>
-        <ul>
-            <li><a href="index.html"><i class="fa-solid fa-house"></i>   Home</a></li>
-            <li><a href="uebermich.html"><i class="fa-solid fa-user"></i>   Über mich</a></li>
-            <li><a href="hobbies.html"><i class="fa-solid fa-brain"></i>   Hobbies</a></li>
-            <li><a href="projekte.html"><i class="fa-solid fa-code"></i>   Projekte</a> </li>
-            <li><a href="impressum.html"><i class="fa-solid fa-envelope"></i>   Impressum</a></li>
-        </ul>
-    </nav>
-</aside>
+
 <main>
+    <img id="random-picture" style="display: none;" alt="Random Picture" src="">
     <div class="grid-container">
-        <div class="grid-item image">
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
+            <img src="bilder/Millenium%20Falcon.png" alt="Placeholder Image">
+        </div>
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
+            <h1>Lego</h1>
+            <p></p>
+        </div>
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
+            <p>dnttjejwrrht'wertt'irenpjiwengkjsndfgkpjnsddfkjgdjfng</p>
+        </div>
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
             <img src="bilder/placeholder.png" alt="Placeholder Image">
         </div>
-        <div class="grid-item text">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu fhajsdhajshdjahsdjhasjdhasjddja</p>
-        </div>
-    </div>
-    <div class="grid-container">
-        <div class="grid-item text">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu fhajsdhajshdjahsdjhasjdhasjddja</p>
-        </div>
-        <div class="grid-item image">
-            <img src="bilder/placeholder.png" alt="Placeholder Image">
-        </div></div>
-    <div class="grid-container">
-        <div class="grid-item image">
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
             <img src="bilder/placeholder.png" alt="Placeholder Image">
         </div>
-        <div class="grid-item text">
+        <div class="grid-item">
+            <div class="tools">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle green"></div>
+            </div>
             <p>adjahsdjalakjsdhfaksdjhgaskjhgalsdjkhlaskjdfgfhasdkjhhflaskdfjhasdkjfalsdkjhf</p>
         </div>
     </div>
-
 </main>
 <footer>
+    <div class="container"></div>
     <p>&copy; 2023 My Eportfolio <a href="https://github.com/NeviSenpai111"><i class="fa-brands fa-github fa-fw" style="color: white;"></i></a><a href="https://www.tiktok.com/@nevisenpai2"><i class="fa-brands fa-tiktok" style="color: white"></i></a> <a href="https://steamcommunity.com/id/Calianno/"><i class="fa-brands fa-steam" style="color: white"></i></a> </p>
 </footer>
 </body>
