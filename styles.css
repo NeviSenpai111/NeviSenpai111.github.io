@@ -11,12 +11,14 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 img {
     width:275px; ;
     height:183px;
 }
+
 
 .container {
     position: fixed;
@@ -166,6 +168,12 @@ footer {
     }
 }
 
+/* New media query for grid items */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack grid items */
+    }
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
