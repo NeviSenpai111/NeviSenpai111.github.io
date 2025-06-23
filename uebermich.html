@@ -31,7 +31,6 @@
   <aside id="sidebar">
     <nav>
       <ul>
-        <li><a href="index.html"><i class="fa-solid fa-house"></i>   Home</a></li>
         <li><a href="uebermich.html"><i class="fa-solid fa-user"></i>   Über mich</a></li>
         <li><a href="hobbies.html"><i class="fa-solid fa-brain"></i>   Hobbies</a></li>
         <li><a href="projekte.html"><i class="fa-solid fa-code"></i>   Projekte</a> </li>
@@ -50,7 +49,7 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <img src="bilder/placeholder.png" alt="Placeholder Image">
+      <img src="bilder/milkmeray.jpg" alt="Placeholder Image">
     </div>
     <div class="grid-item">
       <div class="tools">
@@ -58,7 +57,7 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <p>Ich Liebe Strap-ons und möchte 13 stunden gepegged werden.</p>
+      <p>Mein Name ist Nevio Alessandro Calianno und gehe in die IMS. Alles Weitere wie Hobbys und Lebenslauf finden sie hier auf meinem E-Portfolio.</p>
     </div>
     <div class="grid-item">
       <div class="tools">
@@ -66,7 +65,8 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <p>dnttjejwrrht'wertt'irenpjiwengkjsndfgkpjnsddfkjgdjfng</p>
+      <h1>Skill Chart</h1>
+      <p>Hier finden sie mein Skill Chart was eine Übersicht über meine Skills zeigen soll.</p>
     </div>
     <div class="grid-item">
       <div class="tools">
@@ -74,7 +74,7 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <img src="bilder/placeholder.png" alt="Placeholder Image">
+      <img src="bilder/img.png" alt="Placeholder Image" style="cursor: pointer;" onclick="openImageModal('bilder/img.png')">
     </div>
     <div class="grid-item">
       <div class="tools">
@@ -82,7 +82,7 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <img src="bilder/placeholder.png" alt="Placeholder Image">
+      <img src="bilder/Screenshot%202025-06-23%20at%2012-26-10%20github%20logo%20-%20Google%20Suche.png" alt="Placeholder Image">
     </div>
     <div class="grid-item">
       <div class="tools">
@@ -90,7 +90,11 @@
         <div class="circle yellow"></div>
         <div class="circle green"></div>
       </div>
-      <p>adjahsdjalakjsdhfaksdjhgaskjhgalsdjkhlaskjdfgfhasdkjhhflaskdfjhasdkjfalsdkjhf</p>
+        <h1>Github</h1>
+      <p>Hier ist noch mein Github wo ich meine Projekte hochgeladen habe.</p>
+      <p>Sie können mir gerne auf Github folgen, um meine Projekte zu sehen und zu unterstützen.</p>
+      <a href="https://github.com/NeviSenpai111" style="color: white; text-decoration: none;">
+        <i class="fa-brands fa-github fa-fw" style="color: white;"></i> NeviSenpai111
     </div>
   </div>
 </main>
@@ -98,5 +102,29 @@
   <div class="container"></div>
   <p>&copy; 2024 My Eportfolio <a href="https://github.com/NeviSenpai111"><i class="fa-brands fa-github fa-fw" style="color: white;"></i></a><a href="https://www.tiktok.com/@nevisenpai2"><i class="fa-brands fa-tiktok" style="color: white"></i></a> <a href="https://steamcommunity.com/id/Calianno/"><i class="fa-brands fa-steam" style="color: white"></i></a> </p>
 </footer>
+
+<div id="image-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;" onclick="closeImageModal()">
+  <img id="modal-img" src="" style="max-width:100vw; max-height:100vh; box-shadow:0 0 20px #000; cursor: zoom-in;" onwheel="zoomImage(event)">
+</div>>
+<script>
+  let scale = 1;
+  function zoomImage(e) {
+    e.preventDefault();
+    scale += e.deltaY * -0.001;
+    scale = Math.min(Math.max(.5, scale), 3);
+    e.target.style.transform = `scale(${scale})`;
+  }
+  function openImageModal(src) {
+    scale = 1;
+    const img = document.getElementById('modal-img');
+    img.src = src;
+    img.style.transform = 'scale(1)';
+    document.getElementById('image-modal').style.display = 'flex';
+  }
+  function closeImageModal() {
+    document.getElementById('image-modal').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
